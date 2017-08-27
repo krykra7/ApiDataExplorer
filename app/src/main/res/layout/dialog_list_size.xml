@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:layout_margin="@dimen/margin_medium"
+              android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="@dimen/margin_medium"
+        android:layout_marginBottom="@dimen/margin_big"
+        android:fontFamily="sans-serif"
+        android:text="@string/dialog_list_size_choose"
+        android:textColor="@android:color/holo_blue_dark"
+        android:textSize="@dimen/text_size_medium"/>
+
+    <LinearLayout
+        style="?android:attr/buttonBarStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_medium"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/dialog_list_size_btn_ten"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/margin_medium"
+            android:layout_marginTop="@dimen/margin_big"
+            android:layout_weight="1"
+            android:background="@drawable/round_button"
+            android:fontFamily="sans-serif"
+            android:text="@string/dialog_list_size_ten"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/text_size_medium"/>
+
+        <Button
+            android:id="@+id/dialog_list_size_btn_fifty"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_big"
+            android:layout_weight="1"
+            android:background="@drawable/round_button"
+            android:fontFamily="sans-serif"
+            android:text="@string/dialog_list_size_fifty"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/text_size_medium"/>
+
+        <Button
+            android:id="@+id/dialog_list_size_btn_hundred"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_medium"
+            android:layout_marginTop="@dimen/margin_big"
+            android:layout_weight="1"
+            android:background="@drawable/round_button"
+            android:fontFamily="sans-serif"
+            android:text="@string/dialog_lists_size_hundred"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/text_size_medium"/>
+    </LinearLayout>
+
+</LinearLayout>

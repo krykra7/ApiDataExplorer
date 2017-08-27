@@ -1,19 +1,99 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
+<LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="pl.krystiankrawczyk.apidataexplorer.ExplorerActivity">
+    android:layout_margin="@dimen/margin_medium"
+    android:orientation="vertical">
 
-    <TextView
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/explorer_activity_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        android:elevation="4dp"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+        android:visibility="gone"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+
+        <EditText
+            android:id="@+id/explorer_activity_et_toolbar_search"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:cursorVisible="false"
+            android:hint="@string/explorer_activity_et_search_bar"
+            android:textColor="@android:color/black"/>
+
+    </android.support.v7.widget.Toolbar>
+
+    <ProgressBar
+        android:id="@+id/explorer_activity_pb_progress"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
+        android:layout_gravity="center"
+        android:visibility="gone"/>
 
-</android.support.constraint.ConstraintLayout>
+    <TextView
+        android:id="@+id/explorer_activity_tv_welcome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="@dimen/margin_big"
+        android:fontFamily="sans-serif"
+        android:text="@string/explorer_activity_welcome"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/text_size_big"/>
+
+    <TextView
+        android:id="@+id/explorer_activity_tv_choose_option"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif"
+        android:text="@string/explorer_activity_option"
+        android:textColor="@android:color/holo_blue_dark"
+        android:textSize="@dimen/text_size_big"/>
+
+    <LinearLayout
+        android:id="@+id/explorer_activity_ll_buttons_layout"
+        style="?android:attr/buttonBarStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/explorer_activity_btn_existing_list"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/margin_medium"
+            android:layout_marginTop="@dimen/margin_big"
+            android:layout_weight="1"
+            android:background="@drawable/round_button"
+            android:fontFamily="sans-serif"
+            android:text="@string/explorer_activity_existing"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/text_size_medium"/>
+
+        <Button
+            android:id="@+id/explorer_activity_btn_new_list"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_medium"
+            android:layout_marginTop="@dimen/margin_big"
+            android:layout_weight="1"
+            android:background="@drawable/round_button"
+            android:fontFamily="sans-serif"
+            android:text="@string/explorer_activity_new_list"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/text_size_medium"/>
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/explorer_activity_fragment_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/margin_big"/>
+
+</LinearLayout>

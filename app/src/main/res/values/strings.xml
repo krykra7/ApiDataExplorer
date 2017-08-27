@@ -1,3 +1,19 @@
 <resources>
     <string name="app_name">ApiDataExplorer</string>
+    <string name="explorer_activity_welcome">Welcome in person explorer</string>
+    <string name="explorer_activity_option">Choose option</string>
+    <string name="explorer_activity_existing">Existing list</string>
+    <string name="explorer_activity_new_list">New list</string>
+    <string name="dialog_list_size_choose">Choose list size</string>
+    <string name="dialog_list_size_ten">10</string>
+    <string name="dialog_list_size_fifty">20</string>
+    <string name="dialog_lists_size_hundred">30</string>
+    <string name="fragment_details_text_name">Name:</string>
+    <string name="fragment_details_tv_text_email">Email:</string>
+    <string name="fragment_details_tv_residence">Place of residence</string>
+    <string name="fragment_details_tv_phone_number">Phone:</string>
+    <string name="fragment_details_tv_call">Cell</string>
+    <string name="explorer_activity_et_search_bar">Search name</string>
+    <string name="fragment_details_tv_birthday">Birthday:</string>
 </resources>
+
