@@ -37,7 +37,7 @@
         android:id="@+id/fragment_list_item_iv_favourite"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_gravity="center_vertical|right"
+        android:layout_gravity="center_vertical|end"
         android:layout_weight="1"
         android:background="@drawable/ic_favorite_border_black_24dp"/>
 

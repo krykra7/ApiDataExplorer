@@ -55,11 +55,11 @@ public class ExplorerActivity extends AppCompatActivity implements ListSizeDialo
 
     @OnClick(R.id.explorer_activity_btn_existing_list)
     public void onExistingListClicked() {
-        if (UserSession.getInstance(this).getPersonList().isEmpty()) {
+        if (UserSession.getInstance(ExplorerActivity.this).getPersonList().isEmpty()) {
             Toast.makeText(this, "First add any list", Toast.LENGTH_SHORT).show();
         } else {
             cleanScreen();
-            personList = UserSession.getInstance(this).getPersonList();
+            personList = UserSession.getInstance(ExplorerActivity.this).getPersonList();
             setupPersonListFragment();
         }
     }
@@ -73,14 +73,14 @@ public class ExplorerActivity extends AppCompatActivity implements ListSizeDialo
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_explorer);
-        UserSession.getInstance(this).retrieveListFromPreferences();
+        UserSession.getInstance(ExplorerActivity.this).retrieveListFromPreferences();
         ButterKnife.bind(this);
     }
 
     @Override
     protected void onDestroy() {
         super.onDestroy();
-        UserSession.getInstance(this).savePeopleList();
+        UserSession.getInstance(ExplorerActivity.this).savePeopleList();
     }
 
     @Override

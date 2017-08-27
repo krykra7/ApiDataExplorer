@@ -98,6 +98,7 @@ public class ListAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
 
     private void setTextChangeListenerForSearchField() {
         if (context instanceof ExplorerActivity) {
+            ((ExplorerActivity) context).getEtSearchName().setText("");
             ((ExplorerActivity) context).getEtSearchName().addTextChangedListener(new TextWatcher() {
                 @Override
                 public void beforeTextChanged(CharSequence s, int start, int count, int after) {

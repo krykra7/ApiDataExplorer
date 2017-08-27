@@ -63,6 +63,7 @@
             android:text="@string/dialog_lists_size_hundred"
             android:textColor="@android:color/black"
             android:textSize="@dimen/text_size_medium"/>
+
     </LinearLayout>
 
 </LinearLayout>

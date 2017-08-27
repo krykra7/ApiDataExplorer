@@ -25,7 +25,7 @@ public class UserSession {
     private static UserSession userSession;
     private final SharedPreferences sharedPreferences;
     private final SharedPreferences.Editor editor;
-    private List<Person> listToRemember = new ArrayList<>();
+    private List<Person> listToRemember;
 
     private UserSession(Context context) {
         sharedPreferences = context.getSharedPreferences(PREFERENCES_KEY, Context.MODE_PRIVATE);
@@ -55,6 +55,8 @@ public class UserSession {
         Type personType = new TypeToken<ArrayList<Person>>() {
         }.getType();
         if (sharedPreferences.getString(PERSON_LIST_KEY, DEFAULT_EMPTY_STRING).isEmpty()) {
+            listToRemember = new ArrayList<>();
+        } else {
             listToRemember = new Gson().fromJson(sharedPreferences
                     .getString(PERSON_LIST_KEY, DEFAULT_EMPTY_STRING), personType);
         }

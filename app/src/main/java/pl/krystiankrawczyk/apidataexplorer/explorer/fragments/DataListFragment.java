@@ -28,8 +28,6 @@ import pl.krystiankrawczyk.apidataexplorer.explorer.adapters.ListAdapter;
 
 public class DataListFragment extends Fragment {
 
-    public static final String PERSON_LIST_KEY = "personList";
-
     @BindView(R.id.fragment_list_rv_person_list)
     RecyclerView rvPersonListView;
 

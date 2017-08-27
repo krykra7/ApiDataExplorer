@@ -57,10 +57,10 @@
                 android:id="@+id/fragment_details_tv_email"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/margin_medium"
                 android:fontFamily="sans-serif"
                 android:textColor="@android:color/black"
-                android:textSize="@dimen/text_size_medium"
-                android:layout_marginBottom="@dimen/margin_medium"/>
+                android:textSize="@dimen/text_size_medium"/>
 
             <TextView
                 android:layout_width="wrap_content"
@@ -185,6 +185,5 @@
         android:fontFamily="sans-serif"
         android:textColor="@android:color/black"
         android:textSize="@dimen/text_size_medium"/>
-
 
 </LinearLayout>
